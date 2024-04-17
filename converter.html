@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เห้ย! ลืมเปลี่ยนภาษา</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="all-center header">
+        <h1>Welcome to เห้ย! ลืมเปลี่ยนภาษา</h1>
+    </div>
+    <div class="header" id="preface">
+        <p>เว็บไซต์นี้ ได้แรงบันดาลใจมาจากเว็บ <a href="https://lullar-de-3.appspot.com/">Lullar</a>
+            ที่แปลงข้อความพิมพ์ผิดจากอังกฤษเป็นไทยได้อย่างเดียวเวลาลืมกดเปลี่ยนภาษา
+            เว็บนี้เลยทำให้สามารถเปลี่ยนประโยคหรือข้อความที่พิมพ์ผิดจากภาษาอังกฤษให้เป็นภาษาไทย
+            รวมทั้งเปลี่ยนประโยคหรือข้อความที่พิมพ์ผิดจากภาษาไทยให้เป็นภาษาอังกฤษ
+            เวลาลืมกดเปลี่ยนภาษาได้อัตโนมัติ
+        </p>
+        <p>
+            ต้องบอกก่อนเลยว่า project นี้ได้พลังของเจ้า ChatGPT มาช่วย และ modify เองเพิ่มด้วย คิดเล่น ๆ ว่าถ้ามีเวลาว่าง ในอนาคต อยากลองใช้ NLP มาช่วย detect ความหมายด้วยว่า ข้อความไหนที่มีความหมายอยู่แล้ว ไม่ต้อง convert
+            เป็นอีกภาษา ขอเวลาไปศึกษาก่อน เหมือนจะมี data set Thai Dictionary และ English Dictionary รวมทั้ง Open Access
+            NLP ให้ใช้ แต่เป็น Python ไม่แน่ใจจะ import มาใช้กับ JavaScript ยังไง ถ้าเป็นไปได้ อยากให้รองรับ Layout
+            Keyboard ทุกภาษาในโลกเลย 5555 (ฝันไกลมาก) ใครมี idea แนะนำมาได้เลยค่าาาา
+        </p>
+    </div>
+
+    <div id="converter" class="all-center">
+        <div id="text-blocks">
+
+            <div class="input-block">
+                <label for="input">Input</label>
+                <textarea id="input" name="input" onchange="convertAndDisplay()"></textarea><br>
+            </div>
+
+            <div class="output-block">
+                <label for="output">Output</label>
+                <textarea id="output" name="output" readonly></textarea><br>
+            </div>
+
+        </div>
+        <div class="center">
+            <!-- <button class="button" onclick="convertAndDisplay()">Convert</button><br> -->
+        </div>
+    </div>
+
+    <button onclick="toggleDarkMode()" id="mode" class="button">
+        <i class="bi bi-sun"></i>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

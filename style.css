@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+body {
+    font-family: 'Kanit';
+    font-size: larger;
+}
+
+h1 {
+    color: cornflowerblue;
+}
+
+a:link {
+    color: cornflowerblue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkblue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: mediumblue;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.dark-mode {
+    background-color: rgb(37, 36, 36);
+    color: white;
+
+    a:link {
+        color: cornflowerblue;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: lightblue;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: aqua;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+}
+
+.change-mode {
+    padding: 8px;
+}
+
+.header {
+    margin: 1.5rem;
+}
+
+#preface {
+    word-wrap: break-word;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.all-center {
+    text-align: center;
+    align-items: center;
+}
+
+.center {
+    align-items: center;
+}
+
+#converter {
+    height: 100%;
+}
+
+#text-blocks {
+    display: inline-flex;
+    position: relative;
+    margin: 1rem;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.input-block,
+.output-block {
+    display: inline-block;
+    width: calc(50% - 1rem);
+    /* Set width for input and output blocks */
+    vertical-align: top;
+    /* Align blocks at the top */
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    margin: 0.5rem;
+    padding: 1rem;
+    font-size: larger;
+    width: calc(100% - 1rem);
+    min-height: 125px;
+    /* Set a minimum height for the textarea */
+    resize: vertical;
+    /* Allow vertical resizing */
+    overflow-y: auto;
+    /* Enable vertical scrollbar when needed */
+    word-wrap: break-word;
+    /* Enable word wrap */
+    box-sizing: border-box;
+    /* Include padding in width and height */
+}
+
+.button {
+    margin: 0.5rem;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: larger;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: rgb(62, 62, 62);
+    color: white;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    #text-blocks {
+        display: block;
+        /* Change display to block to stack vertically */
+    }
+
+    .input-block,
+    .output-block {
+        width: 100%;
+        /* Set full width on smaller screens */
+        flex-direction: column;
+    }
+
+    /* Optional: Adjust margins or paddings to improve spacing */
+    #text-blocks .input-block,
+    #text-blocks .output-block {
+        margin: 0.5rem 0;
+        /* Adjust margin for better spacing */
+    }
+}
